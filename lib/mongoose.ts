@@ -19,8 +19,6 @@ export const connectToDB = async () => {
 
   try {
     await mongoose.connect(process.env.MONGODB_URL, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       serverSelectionTimeoutMS: 50000, // Increase to 50 seconds
       socketTimeoutMS: 45000, // Increase to 45 seconds
     });
